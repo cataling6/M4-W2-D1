@@ -2,6 +2,7 @@ let query = document.querySelector("#search");
 let valoreRicerca;
 let counterFetch = 0;
 const card = document.querySelector("#immagine");
+const pageNr = document.querySelector("#pageNr");
 const next = document.querySelector("#next");
 const prev = document.querySelector("#prev");
 
@@ -20,6 +21,7 @@ const fetchPhotos = (page) => {
         }
       })
       .then((imgs) => {
+        /// VARIE PROVE ///
         //const { photos } = imgs;
         //mi filtro tutte le foto con id minore a 10000
         //const result = photos.filter((pic) => pic.id > 100000 && pic.id < 200000);
@@ -34,7 +36,8 @@ const fetchPhotos = (page) => {
         //   </div>
         //     </div> `;
         // });
-
+        /// VARIE PROVE - END ///
+        pageNr.innerHTML = `${counterFetch}`;
         const { photos } = imgs;
         photos.map((photo) => {
           card.innerHTML += `
@@ -80,7 +83,7 @@ const fetchPhotos = (page) => {
         //   </div>
         //     </div> `;
         // });
-
+        pageNr.innerHTML = `${counterFetch}`;
         const { photos } = imgs;
         photos.map((photo) => {
           card.innerHTML += `
