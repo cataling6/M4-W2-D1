@@ -8,7 +8,7 @@ const prev = document.querySelector("#prev");
 
 const fetchPhotos = (page) => {
   if (counterFetch == 0) {
-    fetch(`https://api.pexels.com/v1/search?query=${valoreRicerca}`, {
+    fetch(`https://api.pexels.com/v1/search?query=${valoreRicerca}&per_page=50`, {
       headers: {
         Authorization: "FZRsZAOPwP3pNnVygNbODvcOYnkKNtb3Hpzm3runAtM17yQ0nHiUwu6B",
       },
@@ -56,7 +56,7 @@ const fetchPhotos = (page) => {
       });
     counterFetch++;
   } else {
-    fetch(`https://api.pexels.com/v1/search?query=${valoreRicerca}&page=${page}`, {
+    fetch(`https://api.pexels.com/v1/search?query=${valoreRicerca}&page=${page}&per_page=50`, {
       headers: {
         Authorization: "FZRsZAOPwP3pNnVygNbODvcOYnkKNtb3Hpzm3runAtM17yQ0nHiUwu6B",
       },
