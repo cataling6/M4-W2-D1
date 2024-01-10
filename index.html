@@ -13,7 +13,7 @@
   <body>
     <header>
       <div class="row">
-        <div class="col-lg-12 d-flex gap-2">
+        <div class="col-lg-12 d-flex gap-2 justify-content-between">
           <div class="col-lg-2">
             <div>
               <label for="" class="">Cerca Foto:</label>
@@ -23,25 +23,9 @@
               <input class="btn btn-primary" type="submit" name="" id="button" onclick="cercaImmagine()" />
             </div>
           </div>
-
-          <div class="col-lg-2">
-            <div>
-              <label for="" class="">Filtra per autore:</label>
-            </div>
-            <div class="d-flex">
-              <input class="form-control me-2" type="text" name="" id="search" />
-              <input class="btn btn-primary" type="submit" name="" id="button" onclick="cercaImmagine()" />
-            </div>
-          </div>
-
-          <div class="col-lg-2">
-            <div>
-              <label for="" class="">Filtra titolo per nr di caratteri:</label>
-            </div>
-            <div class="d-flex">
-              <input class="form-control me-2" type="text" name="" id="search" />
-              <input class="btn btn-primary" type="submit" name="" id="button" onclick="cercaImmagine()" />
-            </div>
+          <div class="d-flex gap-2">
+            <input type="button" class="btn btn-secondary" value="<" id="prev" onclick="prevPage()" />
+            <input type="button" class="btn btn-secondary" value=">" id="next" onclick="nextPage()" />
           </div>
         </div>
       </div>
